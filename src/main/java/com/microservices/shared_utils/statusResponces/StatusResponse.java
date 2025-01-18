@@ -1,19 +1,19 @@
 package com.microservices.shared_utils.statusResponces;
 
-public class StandardStatusResponse {
+public class StatusResponse {
     public Boolean success;
     public String message;
     public Object data;
 
-    public StandardStatusResponse() {
+    public StatusResponse() {
     }
 
-    public StandardStatusResponse(Boolean success, String message) {
+    public StatusResponse(Boolean success, String message) {
         this.success = success;
         this.message = message;
     }
 
-    public StandardStatusResponse(Boolean success, String message, Object data) {
+    public StatusResponse(Boolean success, String message, Object data) {
         this.success = success;
         this.message = message;
         this.data = data;
