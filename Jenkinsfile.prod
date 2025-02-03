@@ -1,0 +1,15 @@
+pipeline {
+  agent {
+    node {
+      label 'ltr-prod-server'
+    }
+
+  }
+  stages {
+    stage('Generate Jar Files') {
+      steps {
+        sh '''mvn clean install'''
+      }
+    }
+  }
+}
