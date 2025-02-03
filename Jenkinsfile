@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'dev-server'
-    }
-  }
+  agent any
   stages {
     stage('Generate Jar Files') {
       steps {
