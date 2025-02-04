@@ -17,8 +17,8 @@ public class GlobalConstants {
     public static HashMap<Long, String> CLIENT_DB_CONNECTIONS = new HashMap<>();
     public static final String CLIENT_REPLACEMENT = "springBootDefault";
 
-    public static String generateClientsMongoURL(String tenantHeader) {
-        return "http://localhost:7002/clients/get-mongo-url?tenantId=" + tenantHeader;
+    public static String generateClientsMongoURL(String clientId) {
+        return "http://localhost:7002/clients/get-mongo-url?clientId=" + clientId;
     }
 
 }
