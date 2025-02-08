@@ -26,6 +26,7 @@ public class JwtUtils {
         return createToken(claims, customUserDetails.getUsername(), expiration);
     }
 
+
     public static String createToken(Map<String, Object> claims, String subject, Date expiration) {
         return Jwts.builder()
                 .setSubject(subject) // Add Subject (Username)
