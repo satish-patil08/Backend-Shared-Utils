@@ -51,7 +51,7 @@ public class JwtUtils {
     // Extraction Methods
     public String extractUsername(String token) {
         String localToken = token.replaceAll("Bearer ", "");
-        return extractClaim(token, Claims::getSubject);
+        return extractClaim(localToken, claims -> claims.get("userId", String.class));
     }
 
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
